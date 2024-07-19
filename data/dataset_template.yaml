@@ -1,0 +1,218 @@
+general:
+  datasetName: Dataset Template
+  creators: {}
+  # - name: Stanley Bishop
+  #   contact: science.stanley@stanley.science
+  description: |
+    Enter a description for the dataset here
+    multiple lines are acceptable
+  keywords: []
+  licensing:
+    acessType: # e.g. Open or Privileged
+    accessPatterns: []
+    # - api
+    # - download link
+    # - etc
+    conditionalUsage:
+    licenseUrl:
+    licenseType: # e.g. commercial, educational, internal
+    licenseHolders: {}
+    # if licensed/privileged, provide licensee info
+    # - name: John Smith
+    #   type: indivdual
+    #   expiry: perpetual
+    # - name: New Atlantis
+    #   type: organization
+    #   expiry: 12/12/2025
+  additionalInfo:
+    relatedDatasets:
+    relatedPublications:
+    contactInfo:
+
+metadata:
+  creationDate: '2024-01-01T00:00:00Z'
+  lastUpdated: '2024-12-31T23:59:59Z'
+  version: 0.1.0
+  versionControl:
+    # Git repository URL
+    repositoryUrl:
+    # Branch tags for this specific version of the data
+    branchTag:
+    # List of related issues
+    relatedIssues: []
+    # List of related pull requests
+    pullRequests: []
+  dataFormats: []
+  datasetSize:
+  numberOfRecords:
+  primaryDataType: # e.g., oceanographic profiles, sea level data, marine chemistry
+  dataQuality:
+    qualityControlProcedures: {}
+    # - name: foo
+    #   description: bar
+    knownIssues: {}
+    # - name: foo
+    #   description: bar
+    limitations: {}
+    # - name: foo
+    #   description: bar
+    processingSteps: {}
+    # - name: Normalization
+    #   description: Organizing data to minimize redundancy and improve data integrity by ensuring that data is stored logically and consistently
+
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - exampleProfile:
+        description: Sample description of dataType included in dataset
+        region: Atlantic Ocean
+        temporalCoverage:
+          begin: '2024-01-01T00:00:00Z'
+          end: '2024-12-31T23:59:59Z'
+        # Follows GeoJSON format, more info: https://datatracker.ietf.org/doc/html/rfc7946
+        spatialCoverage:
+          geoJson:
+            type: FeatureCollection
+            features:
+            - type: Feature
+              geometry:
+                type: Point
+                coordinates: [-30.0000, 0.0000]
+              properties:
+                name: Middle of the Atlantic Ocean
+        depthRange:
+          min: 5m
+          max: 500m
+        parametersMeasured:
+        - salinity
+        - temperature
+        instrumentsUsed: {}
+        variablesIncluded: {}
+        files:
+        - path: path/to/datafile
+
+    seaLevel:
+    - exampleEntry:
+        description: Sample description of dataType included in dataset
+        temporalCoverage:
+          begin: '2024-01-01T00:00:00Z'
+          end: '2024-12-31T23:59:59Z'
+        # Follows GeoJSON format, more info: https://datatracker.ietf.org/doc/html/rfc7946
+        spatialCoverage:
+          geoJson:
+            type: FeatureCollection
+            features:
+            - type: Feature
+              geometry:
+                type: Point
+                coordinates: [-30.0000, 0.0000]
+              properties:
+                name: Middle of the Atlantic Ocean
+        measurementFrequency:
+          description: One measurement every second
+          value: 1s
+        datumUsed: {}
+        # - name: foo
+        #   description: bar
+        variablesIncluded: {}
+        # - name: foo
+        #   description: bar
+        files:
+        - path: path/to/datafile
+
+    marineChemistry:
+    - exampleEntry:
+        description: Sample description of dataType included in dataset
+        temporalCoverage:
+          begin: '2024-01-01T00:00:00Z'
+          end: '2024-12-31T23:59:59Z'
+        # Follows GeoJSON format, more info: https://datatracker.ietf.org/doc/html/rfc7946
+        spatialCoverage:
+          geoJson:
+            type: FeatureCollection
+            features:
+            - type: Feature
+              geometry:
+                type: Point
+                coordinates: [-30.0000, 0.0000]
+              properties:
+                name: Middle of the Atlantic Ocean
+        chemicalParameters: {}
+        samplingMethod:
+        variablesIncluded: {}
+        files:
+        - path: path/to/datafile
+
+    biological:
+    - exampleEntry:
+        description: Sample description of dataType included in dataset
+        temporalCoverage:
+          begin: '2024-01-01T00:00:00Z'
+          end: '2024-12-31T23:59:59Z'
+        # Follows GeoJSON format, more info: https://datatracker.ietf.org/doc/html/rfc7946
+        spatialCoverage:
+          geoJson:
+            type: FeatureCollection
+            features:
+            - type: Feature
+              geometry:
+                type: Point
+                coordinates: [-30.0000, 0.0000]
+              properties:
+                name: Middle of the Atlantic Ocean
+        speciesCovered: {}
+        samplingMethod:
+        taxonomicInformation: {}
+        variablesIncluded: {}
+        files:
+        - path: path/to/datafile
+
+    acoustic:
+    - exampleEntry:
+        description: Sample description of dataType included in dataset
+        temporalCoverage:
+          begin: '2024-01-01T00:00:00Z'
+          end: '2024-12-31T23:59:59Z'
+        # Follows GeoJSON format, more info: https://datatracker.ietf.org/doc/html/rfc7946
+        spatialCoverage:
+          geoJson:
+            type: FeatureCollection
+            features:
+            - type: Feature
+              geometry:
+                type: Point
+                coordinates: [-30.0000, 0.0000]
+              properties:
+                name: Middle of the Atlantic Ocean
+        frequencyRange:
+          min:
+          max:
+        instrumentType: {}
+        variablesIncluded: {}
+        files:
+        - path: path/to/datafile
+
+    satellite:
+    - exampleEntry:
+        description: Sample description of dataType included in dataset
+        temporalCoverage:
+          begin: '2024-01-01T00:00:00Z'
+          end: '2024-12-31T23:59:59Z'
+        # Follows GeoJSON format, more info: https://datatracker.ietf.org/doc/html/rfc7946
+        spatialCoverage:
+          geoJson:
+            type: FeatureCollection
+            features:
+            - type: Feature
+              geometry:
+                type: Point
+                coordinates: [-30.0000, 0.0000]
+              properties:
+                name: Middle of the Atlantic Ocean
+        satelliteSensor:
+        resolution:
+        bandsChannels: []
+        variablesIncluded: {}
+        files:
+        - path: path/to/datafile
