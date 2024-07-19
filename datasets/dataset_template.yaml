@@ -1,0 +1,134 @@
+general:
+  datasetName: Dataset Template
+  creators: {}
+  # - name: Stanley Bishop
+  #   contact: science.stanley@stanley.science
+  licensing:
+    acessType: # e.g. Open or Privileged
+    conditionalUsage:
+    licenseUrl:
+    licenseType: # e.g. commercial, educational, internal
+    licenseHolders: {}
+    # if licensed/privileged, provide licensee info
+    # - name: John Smith
+    #   type: indivdual
+    #   expiry: perpetual
+    # - name: New Atlantis
+    #   type: organization
+    #   expiry: 12/12/2025
+
+  accessPattern: []
+  # - api
+  # - download link
+  # - etc
+  description: |
+    Enter a description for the dataset here
+    multiple lines are acceptable
+  keywords: []
+  additionalInfo:
+    relatedDatasets:
+    relatedPublications:
+    contactInfo:
+
+metadata:
+  creationDate: '2024-01-01T00:00:00Z'
+  lastUpdated: '2024-12-31T23:59:59Z'
+  version: 0.1
+  versionControl:
+    # Git repository URL
+    repositoryUrl:
+    # Branch tags for this specific version of the data
+    branchTag:
+    # List of related issues
+    relatedIssues: []
+    # List of related pull requests
+    pullRequests: []
+  temporalCoverage:
+    begin: '2024-01-01T00:00:00Z'
+    end: '2024-12-31T23:59:59Z'
+  spatialCoverage:
+    geoJson:
+      type: FeatureCollection
+      features:
+      - type: Feature
+        geometry:
+          type: Point
+          coordinates: [-30.0000, 0.0000]
+        properties:
+          name: Middle of the Atlantic Ocean
+  dataFormat:
+  fileSize:
+  numberOfRecords:
+  primaryDataType: # e.g., oceanographic profiles, sea level data, marine chemistry
+  dataQuality:
+    qualityControlProcedures: {}
+    # - name: foo
+    #   description: bar
+    knownIssues: {}
+    # - name: foo
+    #   description: bar
+    limitations: {}
+    # - name: foo
+    #   description: bar
+    processingSteps: {}
+    # - name: Normalization
+    #   description: Organizing data to minimize redundancy and improve data integrity by ensuring that data is stored logically and consistently
+
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - profile1:
+        region: Atlantic Ocean
+        # Schema to populate GeoJSON fields 
+        geoJson:
+          type: FeatureCollection
+          features:
+          - type: Feature
+            geometry:
+              type: Polygon
+              coordinates:
+              - [-30.0000, 0.0000] # Point 1: Longitude, Latitude
+              - [-30.0000, 1.0000] # Point 2: Longitude, Latitude
+              - [-29.0000, 1.0000] # Point 3: Longitude, Latitude
+              - [-29.0000, 0.0000] # Point 4: Longitude, Latitude
+              - [-30.0000, 0.0000] # Closing the polygon
+            properties:
+              name: Mid-atlantic polygon
+        depthRange:
+          min:
+          max:
+        parametersMeasured:
+        instrumentUsed:
+        variablesIncluded: []
+
+    # seaLevel:
+    #   measurementFrequency:
+    #   datumUsed: {}
+    #   # - name: foo
+    #   #   description: bar
+    #   variablesIncluded: []
+
+    # marineChemistry:
+    #   chemicalParameters:
+    #   samplingMethod:
+    #   variablesIncluded: []
+
+    # biological:
+    #   speciesCovered:
+    #   samplingMethod:
+    #   taxonomicInformation:
+    #   variablesIncluded: []
+
+    # acoustic:
+    #   frequencyRange:
+    #     min:
+    #     max:
+    #   instrumentType:
+    #   variablesIncluded: []
+
+    # satellite:
+    #   satelliteSensor:
+    #   resolution:
+    #   bandsChannels: []
+    #   variablesIncluded: []
