@@ -1,3 +1,4 @@
+
 ![New Atlantis Labs Logo]([path/to/logo.png](https://cdn.discordapp.com/attachments/1260674491714109620/1263903219109728418/Image_7-19-24_at_9.59_AM.jpeg?ex=669bed19&is=669a9b99&hm=6822043d0ce12e55689cb68f2e818d32047ca9314ab621c672017baf241a0dfd&))
 
 # New Atlantis Labs Ocean Data Fellowship
@@ -48,4 +49,3 @@ The New Atlantis Labs Ocean Data Fellowship focuses on:
 - Pandas, NumPy, Matplotlib
 
 ### Installation
-
