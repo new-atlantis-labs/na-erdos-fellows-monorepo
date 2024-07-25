@@ -1,8 +1,8 @@
 general:
   datasetName: Dataset Template
   creators: {}
-  # - name: Stanley Bishop
-  #   contact: science.stanley@stanley.science
+   - name: Malik Cameron
+     contact: malikcameron95@gmail.com
   licensing:
     acessType: # e.g. Open or Privileged
     conditionalUsage:
