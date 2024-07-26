@@ -56,7 +56,7 @@ Carbon(14), Oxygen, Freon, Helium, Helium(3), Neon, and plankton.
 metadata:
   creationDate: '2016-07-21T00:00:00Z'
   lastUpdated: '2024-06-27T23:59:59Z'
-  version: 0.1
+  version: 1.0
   versionControl:
     # Git repository URL
     repositoryUrl:
