@@ -1,0 +1,131 @@
+general:
+  datasetName: Chlorophyll-a Data Derived From Satellite Images for the Estuary and Gulf of St. Lawrence, Since 1997
+  creators: {
+    name: Julien Laliberté
+    contact: Julien.Laliberte@dfo-mpo.gc.ca}
+  licensing:
+    acessType: Open
+    conditionalUsage:
+    licenseUrl: https://open.canada.ca/en/open-government-licence-canada
+    licenseType: Open Government Licence - Canada
+    licenseHolders: {Fisheries and Oceans Canada}
+
+
+  accessPattern: [https://erddap.ogsl.ca/erddap/griddap/mpoChloroSatellitesCciSince1997v2.csv?chl_a_Multisat%5B(1997-09-04):1:(2021-12-31T00:00:00Z)%5D%5B(45.1875):1:(51.89583)%5D%5B(-71.3125):1:(-55.39583)%5D,Rrs_412nm_model%5B(1997-09-04):1:(2021-12-31T00:00:00Z)%5D%5B(45.1875):1:(51.89583)%5D%5B(-71.3125):1:(-55.39583)%5D,Rrs_443nm_model%5B(1997-09-04):1:(2021-12-31T00:00:00Z)%5D%5B(45.1875):1:(51.89583)%5D%5B(-71.3125):1:(-55.39583)%5D,Rrs_490nm_model%5B(1997-09-04):1:(2021-12-31T00:00:00Z)%5D%5B(45.1875):1:(51.89583)%5D%5B(-71.3125):1:(-55.39583)%5D,Rrs_510nm_model%5B(1997-09-04):1:(2021-12-31T00:00:00Z)%5D%5B(45.1875):1:(51.89583)%5D%5B(-71.3125):1:(-55.39583)%5D,Rrs_560nm_model%5B(1997-09-04):1:(2021-12-31T00:00:00Z)%5D%5B(45.1875):1:(51.89583)%5D%5B(-71.3125):1:(-55.39583)%5D,Rrs_665nm_model%5B(1997-09-04):1:(2021-12-31T00:00:00Z)%5D%5B(45.1875):1:(51.89583)%5D%5B(-71.3125):1:(-55.39583)%5D]
+  # - api
+  # - download link
+  # - etc
+  description: |
+    Chlorophyll-a Data Derived From Satellite Images for the Estuary and Gulf of St. Lawrence, Since 1997
+  keywords: [chlorophyll-a, model data, phytoplankton, remote sensing, satellites]
+  additionalInfo:
+    relatedDatasets:
+    relatedPublications: Mapping Potential Timing of Ice Algal Blooms From Satellite, 
+    contactInfo: {Name: J. C. Stroeve
+    Email: stroeve@nsidc.org}
+
+metadata:
+  creationDate: '2022-10-07'
+  lastUpdated: '2024-10-27T20:04'
+  version: 2
+  versionControl:  
+    # Git repository URL
+    repositoryUrl: https://doi.org/10.26071/ogsl-969715ba-3747
+    # Branch tags for this specific version of the data
+    branchTag:
+    # List of related issues
+    relatedIssues: []
+    # List of related pull requests
+    pullRequests: []
+  temporalCoverage:
+    begin: '1997-09-04T00:00:00Z'
+    end: '2021-12-31T00:00:00Z'
+  spatialCoverage:
+    geoJson:
+      type: Feature
+        geometry:
+          type: Polygon
+          coordinates:
+          - [-71.3125, 51.89583] # Point 1: Longitude, Latitude
+          - [-71.3125, 45.1875] # Point 2: Longitude, Latitude
+          - [-55.39583, 45.1875] # Point 4: Longitude, Latitude
+          - [-55.39583, 51.89583] # Point 3: Longitude, Latitude
+          - [-71.3125, 51.89583] # Closing the polygon
+        properties:
+          name: Gulf of St. Lawrence
+  dataFormat: csv
+  fileSize: 38.26 GB
+  numberOfRecords: 8499
+  primaryDataType: Chlorophyll-a Concentration, Electromagnetic Radiation (412nm, 443nm, 490nm, 510nm, 560nm, 665nm wavelengths)
+  dataQuality:
+    qualityControlProcedures: {}
+    # - name: foo
+    #   description: bar
+    knownIssues: {}
+    # - name: foo
+    #   description: bar
+    limitations: {a lot of NaN values}
+    # - name: foo
+    #   description: bar
+    processingSteps: {}
+    # - name: Normalization
+    #   description: Organizing data to minimize redundancy and improve data integrity by ensuring that data is stored logically and consistently
+
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - profile1:
+        region: Estuary and Gulf of St. Lawrence
+        # Schema to populate GeoJSON fields 
+        geoJson:
+          type: FeatureCollection
+          features:
+          - type: Feature
+            geometry:
+              type: Polygon
+              coordinates:
+              - [-71.3125, 51.89583] # Point 1: Longitude, Latitude
+              - [-71.3125, 45.1875] # Point 2: Longitude, Latitude
+              - [-55.39583, 45.1875] # Point 4: Longitude, Latitude
+              - [-55.39583, 51.89583] # Point 3: Longitude, Latitude
+              - [-71.3125, 51.89583] # Closing the polygon
+            properties:
+              name: Gulf of St. Lawrence
+        depthRange:
+          min:
+          max:
+        parametersMeasured:
+        instrumentUsed:
+        variablesIncluded: []
+
+    # seaLevel:
+    #   measurementFrequency:
+    #   datumUsed: {}
+    #   # - name: foo
+    #   #   description: bar
+    #   variablesIncluded: []
+
+    # marineChemistry:
+    #   chemicalParameters:
+    #   samplingMethod:
+    #   variablesIncluded: []
+
+    # biological:
+    #   speciesCovered:
+    #   samplingMethod:
+    #   taxonomicInformation:
+    #   variablesIncluded: []
+
+    # acoustic:
+    #   frequencyRange:
+    #     min:
+    #     max:
+    #   instrumentType:
+    #   variablesIncluded: []
+
+    # satellite:
+    #   satelliteSensor:
+    #   resolution:
+    #   bandsChannels: []
+    #   variablesIncluded: []
