@@ -54,7 +54,7 @@ metadata:
         properties:
           name: Gulf of St. Lawrence
   dataFormat: csv
-  fileSize: 
+  fileSize: 38.26 GB
   numberOfRecords: 8499
   primaryDataType: Chlorophyll-a Concentration, Electromagnetic Radiation (412nm, 443nm, 490nm, 510nm, 560nm, 665nm wavelengths)
   dataQuality:
