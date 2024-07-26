@@ -1,0 +1,89 @@
+general:
+  datasetName: Modis chlorophyll-a data
+  creators: {
+    name: Alex Rasmussen,
+    contact: ajrmath@gmail.com
+    }
+  licensing:
+    acessType: Open (site registration required)
+    conditionalUsage: See
+      https://www.earthdata.nasa.gov/learn/use-data/data-use-policy
+    licenseUrl: None
+    licenseType: None
+    licenseHolders: {}
+
+  accessPattern: [Direct download, Python script, wget, cURL]
+  description: |
+    Daily global chlorophyll-a concentration as captured by NASA satellites.
+    Chlorophyll measured in mg/m^3. Coverage misses some ocean areas depending
+    on the day. Data can be aggregated across different days. Two different
+    spatial resolutions are available: 9.27 km x 9.27 km or 4.63 km x 4.63 km.
+  keywords: [chlorophyll, satellite, NASA, phytoplankton]
+  additionalInfo:
+    relatedDatasets: There are datasets available from MODIS/Aqua for measuring
+      various other quantities e.g. phytoplankton carbon, sea surface temperature.
+    relatedPublications:
+      [https://oceancolor.gsfc.nasa.gov/resources/docs/technical/atbd_mod19.pdf]
+    contactInfo:
+      NASA Goddard Space Flight Center
+      Code 616
+      8800 Greenbelt Rd
+      Greenbelt, MD  20771
+
+metadata:
+  creationDate:
+  lastUpdated:
+  version:
+  versionControl:
+    repositoryUrl:
+    branchTag:
+    relatedIssues: []
+    pullRequests: []
+  temporalCoverage:
+    begin: 2024-07-04
+    end: present
+  spatialCoverage: whole world
+  dataFormat: .nc files
+  fileSize:
+  numberOfRecords: 8057
+  primaryDataType: Chlorophyll concentration in mg/m^3
+  dataQuality:
+    qualityControlProcedures: {}
+    knownIssues: {}
+    limitations: {}
+    processingSteps: {}
+
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - profile1:
+        region: Global
+        # Schema to populate GeoJSON fields 
+        geoJson:
+          type: FeatureCollection
+          features:
+          - type: Feature
+            geometry:
+              type: Polygon
+              coordinates:
+              - [-90.0000, -180.0000] # Point 1: Longitude, Latitude
+              - [-90.0000, 180.0000] # Point 2: Longitude, Latitude
+              - [90.0000, 180.0000] # Point 3: Longitude, Latitude
+              - [90.0000, -180.0000] # Point 4: Longitude, Latitude
+              - [-90.0000, -180.0000] # Closing the polygon
+            properties:
+              name: Global polygon
+        depthRange:
+          min:
+          max:
+        parametersMeasured: chlorophyll-a concentration
+        instrumentUsed: Moderate Resolution Imaging Spectroradiometer
+        variablesIncluded: [chlor_a, latitude, longitude]
+
+    satellite:
+      satelliteSensor: Moderate Resolution Imaging Spectroradiometer
+      resolution: 9.27 km x 9.27 km or 4.63 km x 4.63 km
+      bandsChannels: [405 - 420 nm, 438 - 448 nm, 483 - 493 nm, 526 - 536 nm,
+        546 - 556 nm, 662 - 672 nm, 673 - 683 nm, 743 - 753 nm, 862 - 877 nm]
+      variablesIncluded: [chlor_a, latitude, longitude]
