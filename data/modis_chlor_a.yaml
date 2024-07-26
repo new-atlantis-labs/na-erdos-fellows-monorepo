@@ -9,7 +9,7 @@ general:
     conditionalUsage: See
       https://www.earthdata.nasa.gov/learn/use-data/data-use-policy
     licenseUrl: None
-    licenseType:
+    licenseType: None
     licenseHolders: {}
 
   accessPattern: [Direct download, Python script, wget, cURL]
@@ -58,7 +58,7 @@ metadata:
     # Uncomment and fill specific data type(s) info for dataset
     oceanographicProfiles:
     - profile1:
-        region: Atlantic Ocean
+        region: Global
         # Schema to populate GeoJSON fields 
         geoJson:
           type: FeatureCollection
@@ -67,23 +67,23 @@ metadata:
             geometry:
               type: Polygon
               coordinates:
-              - [-30.0000, 0.0000] # Point 1: Longitude, Latitude
-              - [-30.0000, 1.0000] # Point 2: Longitude, Latitude
-              - [-29.0000, 1.0000] # Point 3: Longitude, Latitude
-              - [-29.0000, 0.0000] # Point 4: Longitude, Latitude
-              - [-30.0000, 0.0000] # Closing the polygon
+              - [-90.0000, -180.0000] # Point 1: Longitude, Latitude
+              - [-90.0000, 180.0000] # Point 2: Longitude, Latitude
+              - [90.0000, 180.0000] # Point 3: Longitude, Latitude
+              - [90.0000, -180.0000] # Point 4: Longitude, Latitude
+              - [-90.0000, -180.0000] # Closing the polygon
             properties:
-              name: Mid-atlantic polygon
+              name: Global polygon
         depthRange:
           min:
           max:
-        parametersMeasured:
-        instrumentUsed:
-        variablesIncluded: []
+        parametersMeasured: chlorophyll-a concentration
+        instrumentUsed: Moderate Resolution Imaging Spectroradiometer
+        variablesIncluded: [chlor_a, latitude, longitude]
 
     satellite:
       satelliteSensor: Moderate Resolution Imaging Spectroradiometer
       resolution: 9.27 km x 9.27 km or 4.63 km x 4.63 km
-      bandsChannels: [405 - 420, 438 - 448, 483 - 493, 526 - 536,
-        546 - 556, 662 - 672, 673 - 683, 743 - 753, 862 - 877]
+      bandsChannels: [405 - 420 nm, 438 - 448 nm, 483 - 493 nm, 526 - 536 nm,
+        546 - 556 nm, 662 - 672 nm, 673 - 683 nm, 743 - 753 nm, 862 - 877 nm]
       variablesIncluded: [chlor_a, latitude, longitude]
