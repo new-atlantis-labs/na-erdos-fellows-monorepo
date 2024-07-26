@@ -1,0 +1,309 @@
+general:
+  datasetName: World Ocean Database (WOD) - Ocean Station data (OSD)
+  creators:
+    - name : NOAA National Centers for Environmental Information
+      contact : NCEI.Services@noaa.gov 
+ # TODO, You need to find it from the documentations
+  licensing:
+    accessType: Open # e.g. Open or Privileged
+    conditionalUsage: 
+    licenseUrl: 
+    licenseType: # e.g. commercial, educational, internal
+    licenseHolders: {}
+    # if licensed/privileged, provide licensee info
+    # - name: John Smith
+    #   type: indivdual
+    #   expiry: perpetual
+    # - name: New Atlantis
+    #   type: organization
+    #   expiry: 12/12/2025
+
+# TODO Check the landing page
+  accessPattern: 
+  # - api
+    - name : request
+      downloadURL: https://www.ncei.noaa.gov/access/world-ocean-database-select/dbsearch.html
+  # - etc
+  description: |
+    The World Ocean Database (WOD) is a collection of scientifically quality-controlled ocean
+profile and plankton data that includes measurements of temperature, salinity, oxygen,
+phosphate, nitrate, silicate, chlorophyll, alkalinity, pH, pCO2, TCO2, Tritium, Carbon(13),
+Carbon(14), Oxygen, Freon, Helium, Helium(3), Neon, and plankton. For more information check the documentation. 
+
+Main purpose of this data set it to make available to anyone, without restriction, the most complete set of 
+historical ocean profile data and plankton measurements possible in digital form along with ancillary metadata 
+and quality control flags.
+
+  keywords: [
+    salinity, oxygen, phosphate, nitrate, silicate, chlorophyll, alkalinity, pH, pCO2, TCO2, Tritium, Carbon(13),
+Carbon(14), Oxygen, Freon, Helium, Helium(3), Neon, and plankton.
+]
+  additionalInfo:
+    relatedDatasets:
+    relatedPublications: {}
+      - name: Introduction 
+        downloadURL: https://www.ncei.noaa.gov/sites/default/files/2020-04/wod_intro_0.pdf
+      - name: User Manuel
+        downloadURL: https://www.ncei.noaa.gov/sites/default/files/2020-04/wodreadme_0.pdf  
+    associatedPublications: 
+      - name: Data Stewardship Maturity Report for World Ocean Database 
+        downloadURL: https://doi.org/10.25923/901y-ja87 
+    contactInfo: NCEI.Services@noaa.gov  
+    additionalDescription: |
+      Last documentation for the data set was publlished in 2018, however they kept going to add additional data whenever
+      it is avaible. 
+
+metadata:
+  creationDate: '2016-07-21T00:00:00Z'
+  lastUpdated: '2024-06-27T23:59:59Z'
+  version: 0.1
+  versionControl:
+    # Git repository URL
+    repositoryUrl:
+    # Branch tags for this specific version of the data
+    branchTag:
+    # List of related issues
+    relatedIssues: []
+    # List of related pull requests
+    pullRequests: []
+  temporalCoverage:
+    begin: '2024-01-01T00:00:00Z'
+    end: '2024-12-31T23:59:59Z'
+  spatialCoverage:
+    geoJson:
+      type: FeatureCollection
+      features:
+      - type: Feature
+        geometry:
+          type: Point
+          coordinates:
+            - [-180.0000, 180.0000] #longitude 
+            - [-90.000, 90.000] # latitude 
+        properties:
+          name: Entire World Ocean 
+  dataFormat: 
+    - ASCII
+    - netCDF
+    - csv
+  fileSize: 1885.4 MB
+  numberOfRecords: 3,220,635+
+  primaryDataType: oceanographic profiles and plankton data
+
+
+  dataQuality:
+  # TODO give the quality control references here
+    qualityControlProcedures: {}
+    # - name: foo
+    #   description: bar
+    knownIssues: {}
+    # - name: foo
+    #   description: bar
+    limitations: {}
+    # - name: foo
+    #   description: bar
+    processingSteps: {}
+    # - name: Normalization
+    #   description: Organizing data to minimize redundancy and improve data integrity by ensuring that data is stored logically and consistently
+
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - profile1:
+        region: Global
+        # Schema to populate GeoJSON fields 
+        geoJson:
+          type: FeatureCollection
+          features:
+          - type: Feature
+            geometry:
+              type: Polygon
+              coordinates: None 
+              
+            properties:
+              name: Global
+        depthRange:
+          min:
+          max:
+        parametersMeasured:
+          - parameter: Temperature
+            unit: °C
+            reportingUnit: Degree centigrade 
+            numberOfSamples: 2,845,911+ 
+            sampledYears: 1772-2017
+
+          - parameter: Salinity
+            unit: Unitless
+            reportingUnit: None 
+            numberOfSamples: 2,408,713
+            sampledYears: 1873-2017
+
+          - parameter: Dissolved oxygen
+            unit: µmol·kg-1 
+            reportingUnit: Micro-mole per kilogram
+            numberOfSamples: 913,215
+            sampledYears: 1878-2017
+
+          - parameter: Phosphate
+            unit: µmol·kg-1 
+            reportingUnit: Micro-mole per kilogram 
+            numberOfSamples: 597,499
+            sampledYears: 1922-2017
+
+          - parameter: Silicate
+            unit: µmol·kg-1 
+            reportingUnit: Micro-mole per kilogram
+            numberOfSamples: 461,801
+            sampledYears: 1921-2017
+
+          - parameter: Nitrate
+            unit: µmol·kg-1 
+            reportingUnit: Micro-mole per kilogram
+            numberOfSamples: 372,557
+            sampledYears: 1925-2017
+
+          - parameter: pH
+            unit: Unitless
+            reportingUnit: Dimensionless
+            numberOfSamples: 265,898
+            sampledYears: 1910-2017
+
+          - parameter: Chlorophyll
+            unit: µg·l-1
+            reportingUnit: Micro-gram per liter
+            numberOfSamples: 220,059
+            sampledYears: 1933-2017
+
+          - parameter: Alkalinity
+            unit: meq·l-1
+            reportingUnit: Milli-equivalent per liter
+            numberOfSamples: 71,932
+            sampledYears: 1921-2017
+
+          - parameter: Partial pressure of carbon dioxide
+            unit: µatm
+            reportingUnit: Micro-atmosphere
+            numberOfSamples: 3,086
+            sampledYears: 1967-2014
+
+          - parameter: Dissolved inorganic carbon
+            unit: mmol·l-1
+            reportingUnit: Milli-mole per liter
+            numberOfSamples: 21,588
+            sampledYears: 1958-2017
+
+          - parameter: Tritium
+            unit: TU
+            reportingUnit: Tritium Unit
+            numberOfSamples: 1,876
+            sampledYears: 1984-2015
+
+          - parameter: Helium
+            unit: nmol·kg-1
+            reportingUnit: Nano-mol per kilogram
+            numberOfSamples: 1,979
+            sampledYears: 1984-2013
+
+          - parameter: Delta Helium-3
+            unit: %
+            reportingUnit: Percent
+            numberOfSamples: 1,113
+            sampledYears: 1985-2013
+
+          - parameter: Delta Carbon-14
+            unit: ‰
+            reportingUnit: Per-mille deviation
+            numberOfSamples: 1,726
+            sampledYears: 1987-2014
+
+          - parameter: Delta Carbon-13
+            unit: ‰
+            reportingUnit: Per-mille deviation
+            numberOfSamples: 1,800
+            sampledYears: 1991-2014
+
+          - parameter: Argon
+            unit: nmol·kg-1
+            reportingUnit: Nano-mol per kilogram
+            numberOfSamples: 73
+            sampledYears: 1993-1993
+
+          - parameter: Neon
+            unit: nmol·kg-1
+            reportingUnit: Nano-mol per kilogram
+            numberOfSamples: 1,381
+            sampledYears: 1987-2013
+
+          - parameter: Chlorofluorocarbon-11
+            unit: pmol·kg-1
+            reportingUnit: Pico-mole per kilogram
+            numberOfSamples: 16,530
+            sampledYears: 1982-2017
+
+          - parameter: Chlorofluorocarbon-12
+            unit: pmol·kg-1
+            reportingUnit: Pico-mole per kilogram
+            numberOfSamples: 16,617
+            sampledYears: 1982-2017
+
+          - parameter: Chlorofluorocarbon-113
+            unit: pmol·kg-1
+            reportingUnit: Pico-mole per kilogram
+            numberOfSamples: 6,706
+            sampledYears: 1990-2016
+
+          - parameter: Delta Oxygen-18
+            unit: ‰
+            reportingUnit: Per-mille deviation
+            numberOfSamples: 1,186
+            sampledYears: 1991-2010
+
+          - parameter: Pressure
+            unit: dbar
+            reportingUnit: Deci-bar
+            numberOfSamples: 207,107
+            sampledYears: 1890-2017
+
+          - parameter: Plankton taxonomy and Biomass
+            unit: Various units
+            reportingUnit: Various units
+            numberOfSamples: 245,059
+            sampledYears: 1900-2015
+          
+          
+
+
+
+        instrumentUsed:
+        variablesIncluded: []
+
+    # seaLevel:
+    #   measurementFrequency:
+    #   datumUsed: {}
+    #   # - name: foo
+    #   #   description: bar
+    #   variablesIncluded: []
+
+    # marineChemistry:
+    #   chemicalParameters:
+    #   samplingMethod:
+    #   variablesIncluded: []
+
+    # biological:
+    #   speciesCovered:
+    #   samplingMethod:
+    #   taxonomicInformation:
+    #   variablesIncluded: []
+
+    # acoustic:
+    #   frequencyRange:
+    #     min:
+    #     max:
+    #   instrumentType:
+    #   variablesIncluded: []
+
+    # satellite:
+    #   satelliteSensor:
+    #   resolution:
+    #   bandsChannels: []
+    #   variablesIncluded: []
