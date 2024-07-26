@@ -2,7 +2,7 @@ general:
   datasetName: Copernicus Marine Dataset - Monthly Global Oceans O2 (cmems_mod_glo_bgc-bio_anfc_0.25deg_P1M-m_202311)
   creators: {
     - name: Copernicus Marine Service (CMEMS)
-    - contact: servicedesk.cmems@mercator-ocean.eu
+      contact: servicedesk.cmems@mercator-ocean.eu
   }
   
 
