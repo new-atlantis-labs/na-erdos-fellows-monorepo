@@ -1,9 +1,9 @@
 general:
   datasetName: Modis chlorophyll-a data
   creators: {
-    name: Alex Rasmussen
+    name: Alex Rasmussen,
     contact: ajrmath@gmail.com
-  }
+    }
   licensing:
     acessType: Open (site registration required)
     conditionalUsage: See
