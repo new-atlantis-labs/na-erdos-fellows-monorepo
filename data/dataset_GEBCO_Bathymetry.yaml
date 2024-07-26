@@ -1,0 +1,113 @@
+general:
+  datasetName: Gridded Bathymetry Data
+  creators: {
+  - name: GEBCO
+  #   contact:
+  }
+  licensing: 
+    acessType: Open
+    conditionalUsage: Acknowledge the source of The GEBCO Grid. A suitable form of attribution is given in the documentation that accompanies The GEBCO Grid. Not use The GEBCO Grid in a way that suggests any official status or that GEBCO, or the IHO or IOC, endorses any particular application of The GEBCO Grid. Not mislead others or misrepresent The GEBCO Grid or its source.  
+    licenseUrl: https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2019/grid_terms_of_use.html
+    licenseType: 
+    licenseHolders: {}
+
+  accessPattern: [direct download]
+  description: |
+    A global terrain model for ocean and land, providing elevation data, 
+    in meters, on a 15 arc-second interval grid. It is accompanied 
+    by a Type Identifier (TID) Grid that gives information on the types 
+    of source data that the GEBCO_2024 Grid is based on. 
+  keywords: [ocean, elevation, bathymetry, topography]
+  additionalInfo:
+    relatedDatasets:
+    relatedPublications:
+    contactInfo:
+
+metadata:
+  creationDate: '1903'
+  lastUpdated: '2024'
+  version: 
+  versionControl:
+    # Git repository URL
+    repositoryUrl:
+    # Branch tags for this specific version of the data
+    branchTag:
+    # List of related issues
+    relatedIssues: []
+    # List of related pull requests
+    pullRequests: []
+  temporalCoverage:
+    begin: '1903'
+    end: 'ongoing'
+  spatialCoverage: Global
+    geoJson:
+      type: FeatureCollection
+      features:
+      - type: Feature
+        geometry:
+          type: grid
+          coordinates: 
+        properties:
+          name: Global Grid
+  dataFormat: netCDF, Data GeoTiff,Esri ASCII raster
+  fileSize: 4 Gbytes
+  numberOfRecords:
+  primaryDataType: Elevation Level Data
+  dataQuality:
+    qualityControlProcedures: {}
+    knownIssues: {}
+    limitations: {}
+    processingSteps: {}
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - profile1:
+        region: Global Ocean and Terrain
+        # Schema to populate GeoJSON fields 
+        geoJson:
+          type: FeatureCollection
+          features:
+          - type: Feature
+            geometry:
+              type: Grid
+              coordinates:
+            properties:
+              name: Global Ocean and Terrain
+        depthRange:
+          min:
+          max:
+        parametersMeasured: Elevation Data
+        instrumentUsed: See https://www.gebco.net/about_us/acknowledgements/our_data_contributors/
+        variablesIncluded: []
+
+    # seaLevel:
+    #   measurementFrequency:
+    #   datumUsed: {}
+    #   # - name: foo
+    #   #   description: bar
+    #   variablesIncluded: []
+
+    # marineChemistry:
+    #   chemicalParameters:
+    #   samplingMethod:
+    #   variablesIncluded: []
+
+    # biological:
+    #   speciesCovered:
+    #   samplingMethod:
+    #   taxonomicInformation:
+    #   variablesIncluded: []
+
+    # acoustic:
+    #   frequencyRange:
+    #     min:
+    #     max:
+    #   instrumentType:
+    #   variablesIncluded: []
+
+    # satellite:
+    #   satelliteSensor:
+    #   resolution:
+    #   bandsChannels: []
+    #   variablesIncluded: []
