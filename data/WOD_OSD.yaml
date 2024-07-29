@@ -3,7 +3,7 @@ general:
   creators:
     - name : NOAA National Centers for Environmental Information
       contact : NCEI.Services@noaa.gov 
- # TODO, You need to find it from the documentations
+ # TODO, You need to find it in the documentations
   licensing:
     accessType: Open # e.g. Open or Privileged
     conditionalUsage: 
@@ -30,7 +30,7 @@ profile and plankton data that includes measurements of temperature, salinity, o
 phosphate, nitrate, silicate, chlorophyll, alkalinity, pH, pCO2, TCO2, Tritium, Carbon(13),
 Carbon(14), Oxygen, Freon, Helium, Helium(3), Neon, and plankton. For more information check the documentation. 
 
-Main purpose of this data set it to make available to anyone, without restriction, the most complete set of 
+The main purpose of this data set is to make available to anyone, without restriction, the most complete set of 
 historical ocean profile data and plankton measurements possible in digital form along with ancillary metadata 
 and quality control flags.
 
@@ -67,7 +67,7 @@ metadata:
     # List of related pull requests
     pullRequests: []
   temporalCoverage:
-    begin: '2024-01-01T00:00:00Z'
+    begin: '1772-01-01T00:00:00Z'
     end: '2024-12-31T23:59:59Z'
   spatialCoverage:
     geoJson:
