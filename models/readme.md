@@ -22,10 +22,10 @@ Each team should have their own folder using the following naming format:
 Each model script should be named using the following format:
 
 
-*model_team_name_modelType.py*
+*model_team_name_ModelType.py*
 - **model**: A constant prefix indicating the file contains a model.
 - **team_name**: The name of the team responsible for the model.
-- **modelType**: The type of the model, written in Upper Camel Case (also known as Pascal Case).
+- **ModelType**: The type of the model, written in Upper Camel Case (also known as Pascal Case).
 
 ### Example
 
