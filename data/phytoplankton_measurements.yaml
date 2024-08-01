@@ -1,0 +1,130 @@
+general:
+  datasetName: NOAA Benthic Ecology Dataset
+  creators:
+    - Team: Ocean optimizers  
+      Name: Aryama Singh 
+      Name: Maggie Swerdloff
+      Name: Meltem Uyanik
+      Name: Junaid Hasan
+      Name: Korel Gundem
+      Name: Aihemaiti Maitituerdi
+      Name: Noah Rahman
+
+   # - name: NOAA NCEI
+   #   contact: ncei.info@noaa.gov
+
+  licensing:
+    accessType: Open
+    conditionalUsage: None
+    licenseUrl: https://www.ncei.noaa.gov/erddap/tabledap/bedi_PMN.htmlTable?latitude%2Clongitude%2Csampl_site%2Cdatecollec%2Cspec_name%2Cabundance%2Cwater_temp%2Cair_temp%2Csalinity%2Ccomments%2Cweather%2Cwinddirect%2Cwindspeed%2Ctide%2Ccount%2Cph%2Cdissoxygen%2Csecchidisk%2Cbarpressur&latitude%3E=18&latitude%3C=31&longitude%3E=-88&longitude%3C=-70
+    licenseType: educational
+    licenseHolders:
+      - name: NOAA
+        type: organization
+        expiry: perpetual
+  accessPattern:
+    - download link: https://www.ncei.noaa.gov/erddap/tabledap/bedi_PMN.htmlTable?latitude%2Clongitude%2Csampl_site%2Cdatecollec%2Cspec_name%2Cabundance%2Cwater_temp%2Cair_temp%2Csalinity%2Ccomments%2Cweather%2Cwinddirect%2Cwindspeed%2Ctide%2Ccount%2Cph%2Cdissoxygen%2Csecchidisk%2Cbarpressur&latitude%3E=18&latitude%3C=31&longitude%3E=-88&longitude%3C=-70
+  description: |
+    This dataset contains measurements related to benthic ecology, including
+    information about sample sites, species abundance, water and air temperature,
+    salinity, weather, wind direction and speed, tide, pH, dissolved oxygen,
+    secchi disk depth, and barometric pressure. The data covers coordinates
+    from North 31°, South 18°, East -70°, and West -88°.
+  keywords:
+    - benthic ecology
+    - marine life
+    - water quality
+    - NOAA
+  additionalInfo:
+    relatedDatasets: None
+    relatedPublications: None
+    contactInfo: ncei.info@noaa.gov
+
+metadata:
+  creationDate: '2018-01-01T00:00:00Z'
+  lastUpdated: '2024-07-29T23:59:59Z'
+  version: 1.0
+  versionControl:
+    repositoryUrl: None
+    branchTag: None
+    relatedIssues: []
+    pullRequests: []
+  temporalCoverage:
+    begin: '2018-01-01T00:00:00Z'
+    end: '2024-07-29T23:59:59Z'
+  spatialCoverage:
+    geoJson:
+      type: FeatureCollection
+      features:
+      - type: Feature
+        geometry:
+          type: Polygon
+          coordinates:
+            - [-88.0, 31.0] # NW
+            - [-88.0, 18.0] # SW
+            - [-70.0, 18.0] # SE
+            - [-70.0, 31.0] # NE
+            - [-88.0, 31.0] # NW (closing the polygon)
+        properties:
+          name: Benthic Ecology Study Area
+  dataFormat: CSV
+  fileSize: 20MB (estimated)
+  numberOfRecords: N/A
+  primaryDataType: marine chemistry
+  dataQuality:
+    qualityControlProcedures:
+      - name: Data Cleaning
+        description: Remove missing values and correct erroneous entries.
+    knownIssues: {}
+    limitations: {}
+    processingSteps:
+      - name: Normalization
+        description: Normalize numerical columns to a standard scale.
+      - name: Feature Engineering
+        description: Create new features such as pollutant ratios and moving averages.
+
+dataTypes:
+  marineChemistry:
+    chemicalParameters: []
+    samplingMethod: various
+    variablesIncluded:
+      - latitude
+      - longitude
+      - sampl_site
+      - datecollec
+      - spec_name
+      - abundance
+      - water_temp
+      - air_temp
+      - salinity
+      - comments
+      - weather
+      - winddirect
+      - windspeed
+      - tide
+      - count
+      - ph
+      - dissoxygen
+      - secchidisk
+      - barpressur
+
+tableFields:
+  - latitude: Latitude of the sample site
+  - longitude: Longitude of the sample site
+  - sampl_site: Name or identifier of the sample site
+  - datecollec: Date of sample collection
+  - spec_name: Species name (e.g., Halimeda spp., Porites astreoides, Acropora spp.)
+  - abundance: Abundance of the species
+  - water_temp: Water temperature in °C
+  - air_temp: Air temperature in °C
+  - salinity: Salinity in PSU (Practical Salinity Units)
+  - comments: Additional comments or notes
+  - weather: Weather conditions
+  - winddirect: Wind direction
+  - windspeed: Wind speed in m/s
+  - tide: Tide condition
+  - count: Count of samples
+  - ph: pH level of the water
+  - dissoxygen: Dissolved oxygen in mg/L
+  - secchidisk: Secchi disk depth in meters
+  - barpressur: Barometric pressure in hPa
