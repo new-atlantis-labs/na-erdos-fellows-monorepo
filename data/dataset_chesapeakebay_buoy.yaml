@@ -4,14 +4,14 @@ general:
   - name: Chesapeake Bay Interpretive Buoy System
     contact: cbibs@noaa.gov
   licensing:
-    acessType: 
+    acessType: open access (NOAA NODD)
     conditionalUsage: 
     licenseUrl: 
-    licenseType: 
+    licenseType: NOAA Open Data Dissemination
     licenseHolders:
-      - name: 
-        type: 
-        expiry: 
+      - name: NOAA
+        type: NODD
+        expiry: perpetual
   accessPattern:
     - api
     - download link
