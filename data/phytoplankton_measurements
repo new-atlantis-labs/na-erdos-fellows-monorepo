@@ -1,8 +1,18 @@
 general:
   datasetName: NOAA Benthic Ecology Dataset
   creators:
-    - name: NOAA NCEI
-      contact: ncei.info@noaa.gov
+    - Team: Ocean optimizers  
+      Name: Aryama Singh 
+      Name: Maggie Swerdloff
+      Name: Meltem Uyanik
+      Name: Junaid Hasan
+      Name: Korel Gundem
+      Name: Aihemaiti Maitituerdi
+      Name: Noah Rahman
+
+   # - name: NOAA NCEI
+   #   contact: ncei.info@noaa.gov
+
   licensing:
     accessType: Open
     conditionalUsage: None
