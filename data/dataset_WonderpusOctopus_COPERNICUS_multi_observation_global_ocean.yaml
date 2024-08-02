@@ -1,0 +1,122 @@
+general:
+  datasetName: Copernicus Marine Dataset - Multi Observation Global Ocean 3D Temperature Salinity Height Geostrophic Current and MLD (dataset-armor-3d-nrt-monthly)
+  creators: {}
+    - name: Copernicus Marine Service (CMEMS)
+      contact: servicedesk.cmems@mercator-ocean.eu
+
+  
+
+  licensing:
+    acessType: Open
+    conditionalUsage: Allowed to modify, adapt, develop, create and distribute Value Added Products or Derivative Work from Copernicus Marine Service Products for any purpose.
+    licenseUrl: https://marine.copernicus.eu/user-corner/service-commitments-and-licence
+    licenseType: 
+    licenseHolders: {}
+      - name: Mercator Ocean International
+        type: organization
+        expiry: perpetual
+    
+   
+
+  accessPattern: [ api, direct download ]
+
+  description: |
+    Copernicus Marine Data
+    Multi Observation Global Ocean 3D Temperature Salinity Height Geostrophic Current and MLD
+    Product MULTIOBS_GLO_PHY_TSUV_3D_MYNRT_015_012
+    Geographical area: Global ocean
+    Variables: it consists of 3D Temperature, Salinity, Heights, Geostrophic Currents and Mixed Layer Depth
+    Timeframe: from January 2019 to June 2024 (monthly)
+    Dataset available at https://data.marine.copernicus.eu/product/MULTIOBS_GLO_PHY_TSUV_3D_MYNRT_015_012/services
+  keywords: [Copernicus, Global, Ocean, Multiobservation]
+  additionalInfo:
+    relatedDatasets: 
+    relatedPublications:
+    contactInfo: 
+
+metadata:
+  creationDate: 
+  lastUpdated: '2024-07-09T17:33:29.750907'
+  version: 
+  versionControl:
+    repositoryUrl:
+    
+    branchTag:
+    
+    relatedIssues: []
+    
+    pullRequests: []
+  temporalCoverage:
+    begin: '2019-01-01T00:00:00Z'
+    end: '2024-06-01T00:00:00Z'
+  spatialCoverage:
+    geoJson:
+      type: FeatureCollection
+      features:
+      - type: Feature
+        geometry:
+          type: Polygon
+          coordinates:
+          - [-179.875, -82.12] # Lower corner
+          - [-179.875,  89.875]
+          - [179.875, 89.875] # Upper corner
+          - [179.875, -82.12]
+          - [-179.875, -82.12]
+        properties:
+          name: Global Ocean
+  dataFormat: NetCDF-4
+  fileSize:
+  numberOfRecords:
+  primaryDataType: Biogeochemical ocean data
+  dataQuality:
+    qualityControlProcedures: {}
+    
+    knownIssues: {}
+  
+    limitations: {}
+   
+    processingSteps: {}
+    
+
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - profile1:
+        region: Global Ocean
+        # Schema to populate GeoJSON fields 
+        geoJson:
+          type: FeatureCollection
+          features:
+          - type: Feature
+            geometry:
+              type: Polygon
+              coordinates:
+              # This is the box within which we got the data.
+              # NOTE: The box might includes lands as well, even though the data is just for the oceans.
+              - [-179.875, -82.12] # Lower corner
+              - [-179.875,  89.875]
+              - [179.875, 89.875] # Upper corner
+              - [179.875, -82.12]
+              - [-179.875, -82.12]
+            properties:
+              name: Global Ocean polygon
+        depthRange:
+          min: 
+          max: 
+        parametersMeasured: 
+        - Ocean mixed layer thickness [m] (mlotst)
+        - Sea water salinity [0.001] (so)
+        - Sea water temperature [degrees_C] (to)
+        - Geostrophic eastward sea water velocity [m s-1] (ugo)
+        - Geostrophic northward sea water velocity [m s-1] (vgo)
+        - Geopotential height [m] (zo)
+        instrumentUsed:
+        variablesIncluded: 
+        - mlotst
+        - so
+        - to
+        - ugo
+        - vgo
+        - zo
+
