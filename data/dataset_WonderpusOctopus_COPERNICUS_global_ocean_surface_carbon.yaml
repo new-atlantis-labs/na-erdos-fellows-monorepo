@@ -1,0 +1,145 @@
+general:
+  datasetName: Copernicus Marine Dataset - Global Ocean Surface Carbon (dataset-carbon-rep-monthly)
+  creators: {
+    - name: Copernicus Marine Service (CMEMS)
+      contact: servicedesk.cmems@mercator-ocean.eu
+  }
+  
+
+  licensing:
+    acessType: Open
+    conditionalUsage: Allowed to modify, adapt, develop, create and distribute Value Added Products or Derivative Work from Copernicus Marine Service Products for any purpose.
+    licenseUrl: https://marine.copernicus.eu/user-corner/service-commitments-and-licence
+    licenseType: 
+    licenseHolders: {
+      - name: Mercator Ocean International
+        type: organization
+        expiry: perpetual
+    }
+   
+
+  accessPattern: [ api, direct download ]
+
+  description: |
+    Copernicus Marine Data
+    Global Ocean Surface Carbon
+    Product MULTIOBS_GLO_BIO_CARBON_SURFACE_REP_015_008
+    Geographical area: Global oceans
+    Variables: Dissolved inorganic carbon in sea water (DIC), 
+    Sea water ph reported on total scale (pH),
+    Surface partial pressure of carbon dioxide in sea water (spCO2),
+    Surface downward mass flux of carbon dioxide expressed as carbon (fpCO2),
+    Total alkalinity in sea water.
+    Timeframe: from January 1985 to December 2022 (monthly)
+    Dataset available at https://data.marine.copernicus.eu/product/MULTIOBS_GLO_BIO_CARBON_SURFACE_REP_015_008/services
+  keywords: [Copernicus, Global, Ocean, surface, carbon]
+  additionalInfo:
+    relatedDatasets: 
+    relatedPublications:
+    contactInfo: 
+
+metadata:
+  creationDate: '2023-11-30T11:00:00.000Z'
+  lastUpdated: '2024-07-04T16:21:32.924150Z'
+  version: 
+  versionControl:
+    repositoryUrl:
+    
+    branchTag:
+    
+    relatedIssues: []
+    
+    pullRequests: []
+  temporalCoverage:
+    begin: '1985-01-01T00:00:00Z'
+    end: '2022-12-01T00:00:00Z'
+  spatialCoverage:
+    geoJson:
+      type: FeatureCollection
+      features:
+      - type: Feature
+        geometry:
+          type: Polygon
+          coordinates:
+            - [-179.875, -88.125] # Lower corner
+            - [-179.875,  89.875]
+            - [179.875, 89.875] # Upper corner
+            - [179.875, -88.125]
+            - [-179.875, -88.125]
+        properties:
+          name: Global Ocean
+  dataFormat: NetCDF-4
+  fileSize:
+  numberOfRecords:
+  primaryDataType: Biogeochemical ocean data
+  dataQuality:
+    qualityControlProcedures: {}
+    
+    knownIssues: {}
+  
+    limitations: {}
+   
+    processingSteps: {}
+    
+
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - profile1:
+        region: Global Oceans
+        # Schema to populate GeoJSON fields 
+        geoJson:
+          type: FeatureCollection
+          features:
+          - type: Feature
+            geometry:
+              type: Polygon
+              coordinates:
+              # This is the box within which we got the data.
+              # NOTE: The box might includes lands as well, even though the data is just for the oceans.
+                - [-179.875, -88.125] # Lower corner
+                - [-179.875,  89.875]
+                - [179.875, 89.875] # Upper corner
+                - [179.875, -88.125]
+                - [-179.875, -88.125]
+            properties:
+              name: Global Ocean polygon
+        depthRange:
+          min:
+          max:
+        parametersMeasured: 
+          - Surface downward mass flux of carbon dioxide expressed as carbon [molC m-2 yr-1] (fgco2)
+          - Uncertainty surface downward mass flux of carbon dioxide expressed as carbon [molC m-2 yr-1] (fgco2_uncertainty)
+          - Aragonite saturation state in sea water [no unit] (omega_r)
+          - Uncertainty aragonite saturation state in sea water [no unit] (omega_ar_uncertainty)
+          - Calcite saturation state in sea water [no unit] (omega_ca)
+          - Uncertainty calcite saturation state in sea water [no unit] (omega_ca_uncertainty)
+          - Sea water ph reported on total scale [1] (ph)
+          - Uncertainty sea water ph reported on total scale [1] (ph_uncertainty)
+          - Surface partial pressure of carbon dioxide in sea water [micro atm] (spco2)
+          - Uncertainty surface partial pressure of carbon dioxide in sea water [micro atm] (spco2_uncertainty)
+          - Total alkalinity in sea water [micro mol kg-1] (talk)
+          - Uncertainty total alkalinity in sea water [micro mol kg-1] (talk_uncertainty)
+          - Dissolved inorganic carbon in sea water [micro mol kg-1] (tco2)
+          - Uncertainty dissolved inorganic carbon in sea water [micro mol kg-1] (tco2_uncertainty)
+
+
+        instrumentUsed:
+        variablesIncluded: 
+          - fgco2
+          - fgco2_uncertainty
+          - omega_ar
+          - omega_ar_uncertainty
+          - omega_ca
+          - omega_ca_uncertainty
+          - ph
+          - ph_uncertainty
+          - spco2
+          - spco2_uncertainty
+          - talk
+          - talk_uncertainty
+          - tco2
+          - tco2_uncertainty
+
+
