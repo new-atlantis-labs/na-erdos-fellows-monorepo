@@ -1,0 +1,133 @@
+general:
+  datasetName: Copernicus Marine Dataset - Global Ocean Physics Reanalysis (cmems_mod_glo_phy_my_0.083deg_P1M-m)
+  creators: {
+    - name: Copernicus Marine Service (CMEMS)
+      contact: servicedesk.cmems@mercator-ocean.eu
+  }
+  
+
+  licensing:
+    acessType: Open
+    conditionalUsage: Allowed to modify, adapt, develop, create and distribute Value Added Products or Derivative Work from Copernicus Marine Service Products for any purpose.
+    licenseUrl: https://marine.copernicus.eu/user-corner/service-commitments-and-licence
+    licenseType: 
+    licenseHolders: {
+      - name: Mercator Ocean International
+        type: organization
+        expiry: perpetual
+    }
+   
+
+  accessPattern: [ api, direct download ]
+
+  description: |
+    Copernicus Marine Data
+    Global Ocean Physics Reanalysis
+    GLOBAL_MULTIYEAR_PHY_001_030
+    This product includes daily and monthly mean files for temperature, salinity, currents, sea level, mixed layer depth and ice parameters from the top to the bottom. 
+    Geographical area: Global ocean
+    Variables:  temperature, salinity, currents, sea level, mixed layer depth and ice parameters from the top to the bottom.
+    Timeframe: from 1 January 1993 to 1 June 2021 (monthly)
+    Dataset available at https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/services
+  keywords: [Copernicus, Global, Oceans, reanalysis]
+  additionalInfo:
+    relatedDatasets: 
+    relatedPublications:
+    contactInfo: 
+
+metadata:
+  creationDate: '2023-11-30T11:00:00.000Z'
+  lastUpdated: '2024-07-04T13:58:56.137352Z'
+  version: 
+  versionControl:
+    repositoryUrl:
+    
+    branchTag:
+    
+    relatedIssues: []
+    
+    pullRequests: []
+  temporalCoverage:
+    begin: '1993-01-01T00:00:00Z'
+    end: '2021-06-01T00:00:00Z'
+  spatialCoverage:
+    geoJson:
+      type: FeatureCollection
+      features:
+      - type: Feature
+        geometry:
+          type: Polygon
+          coordinates:
+            - [-180, -80] # Lower corner
+            - [-180,  90]
+            - [179.9166717529297, 90] # Upper corner
+            - [179.9166717529297, -80]
+            - [-180, -80]
+        properties:
+          name: Global Oceans
+  dataFormat: NetCDF-4
+  fileSize:
+  numberOfRecords:
+  primaryDataType: Biogeochemical ocean data
+  dataQuality:
+    qualityControlProcedures: {}
+    
+    knownIssues: {}
+  
+    limitations: {}
+   
+    processingSteps: {}
+    
+
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - profile1:
+        region: Global Oceans
+        # Schema to populate GeoJSON fields 
+        geoJson:
+          type: FeatureCollection
+          features:
+          - type: Feature
+            geometry:
+              type: Polygon
+              coordinates:
+              # This is the box within which we got the data.
+              # NOTE: The box might includes lands as well, even though the data is just for the oceans.
+              - [-180, -80] # Lower corner
+              - [-180,  90]
+              - [179.9166717529297, 90] # Upper corner
+              - [179.9166717529297, -80]
+              - [-180, -80]
+            properties:
+              name: Global Ocean polygon
+        depthRange:
+          min: -5727.91650390625
+          max: -0.4940253794193268
+        parametersMeasured: 
+          - Sea water potential temperature at sea floor [degrees Celsius] (bottomT)
+          - Ocean mixed layer thickness defined by sigma theta [meters] (mlotst)
+          - Sea ice area fraction [1] (siconc)
+          - Sea ice thickness [meters] (sithick)
+          - Sea water salinity [1e-3] (so)
+          - Sea water potential temperature [degrees Celsius] (thetao)
+          - Eastward sea water velocity [meters/seconds] (uo)
+          - Eastward sea ice velocity [meters/seconds] (usi)
+          - Northward sea water velocity [meters/seconds] (vo)
+          - Northward sea ice velocity [meters/seconds] (vsi)
+          - Sea surface height above geoid [meters] (zos)
+        instrumentUsed:
+        variablesIncluded: 
+          - bottomT
+          - mlotst
+          - siconc
+          - sithick
+          - so
+          - thetao
+          - uo
+          - usi
+          - vo
+          - vsi
+          - zos
+
