@@ -1,0 +1,120 @@
+general:
+  datasetName: Copernicus Marine Dataset - Global Ocean OSTIA Sea Surface Temperature and Sea Ice Analysis (ST_GLO_SST_L4_NRT_OBSERVATIONS_010_001/METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2/analysed_sst)
+  creators: {
+    - name: Copernicus Marine Service (CMEMS)
+      contact: servicedesk.cmems@mercator-ocean.eu
+  }
+  
+
+  licensing:
+    acessType: Open
+    conditionalUsage: Allowed to modify, adapt, develop, create and distribute Value Added Products or Derivative Work from Copernicus Marine Service Products for any purpose.
+    licenseUrl: https://marine.copernicus.eu/user-corner/service-commitments-and-licence
+    licenseType: 
+    licenseHolders: {
+      - name: Mercator Ocean International
+        type: organization
+        expiry: perpetual
+    }
+   
+
+  accessPattern: [ api, direct download ]
+
+  description: |
+    Copernicus Marine Data
+    Global Ocean OSTIA Sea Surface Temperature and Sea Ice Analysis
+    Geographical area: Global ocean
+    Variables: 1) Sea surface temperature (SST)
+    2) Sea ice area fraction
+    Timeframe: from 1 Jan 2007 to 31 Jul 2024 (daily)
+    Dataset available at https://data.marine.copernicus.eu/product/SST_GLO_SST_L4_NRT_OBSERVATIONS_010_001/services
+  keywords: [Copernicus, Global, Ocean, SST]
+  additionalInfo:
+    relatedDatasets: 
+    relatedPublications:
+    contactInfo: 
+
+metadata:
+  creationDate: 
+  lastUpdated: '2024-08-01T09:03:13.823684Z'
+  version: 
+  versionControl:
+    repositoryUrl:
+    
+    branchTag:
+    
+    relatedIssues: []
+    
+    pullRequests: []
+  temporalCoverage:
+    begin: '2007-01-01T00:00:00Z'
+    end: '2024-07-31T00:00:00Z'
+  spatialCoverage:
+    geoJson:
+      type: FeatureCollection
+      features:
+      - type: Feature
+        geometry:
+          type: Polygon
+          coordinates:
+            - [-179.97500610351562, -89.9749984741211] # Lower corner
+            - [-179.97500610351562,  89.9749984741211]
+            - [179.97500610351562, 89.9749984741211] # Upper corner
+            - [179.97500610351562, -89.9749984741211]
+            - [-179.97500610351562, -89.9749984741211]
+        properties:
+          name: Global Ocean
+  dataFormat: 
+    - NetCDF-3
+    - NetCDF-4
+  fileSize:
+  numberOfRecords:
+  primaryDataType: Satellite data
+  dataQuality:
+    qualityControlProcedures: {}
+    
+    knownIssues: {}
+  
+    limitations: {}
+   
+    processingSteps: {}
+    
+
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - profile1:
+        region: Global Oceans
+        # Schema to populate GeoJSON fields 
+        geoJson:
+          type: FeatureCollection
+          features:
+          - type: Feature
+            geometry:
+              type: Polygon
+              coordinates:
+              # This is the box within which we got the data.
+              # NOTE: The box might includes lands as well, even though the data is just for the oceans.
+              - [-179.97500610351562, -89.9749984741211] # Lower corner
+              - [-179.97500610351562,  89.9749984741211]
+              - [179.97500610351562, 89.9749984741211] # Upper corner
+              - [179.97500610351562, -89.9749984741211]
+              - [-179.97500610351562, -89.9749984741211]
+            properties:
+              name: Global Ocean polygon
+        depthRange:
+          min: 
+          max: 
+        parametersMeasured: 
+          - Sea surface foundation temperature [kelvin] (analysed_sst)
+          - Sea surface foundation temperature standard error [kelvin] (analysis_error)
+          - Land sea ice lake bit mask [no unit] (mask)
+          - Sea ice area fraction [no unit] (sea_ice_fraction)
+        instrumentUsed: Satellites
+        variablesIncluded: 
+          - analysed_sst 
+          - analysis_error
+          - mask
+          - sea_ice_fraction
+
