@@ -1,9 +1,9 @@
 general:
   datasetName: Copernicus Marine Dataset - Monthly Global Oceans O2 (cmems_mod_glo_bgc-bio_anfc_0.25deg_P1M-m_202311)
-  creators: {
+  creators: {}
     - name: Copernicus Marine Service (CMEMS)
       contact: servicedesk.cmems@mercator-ocean.eu
-  }
+
   
 
   licensing:
@@ -11,11 +11,10 @@ general:
     conditionalUsage: Allowed to modify, adapt, develop, create and distribute Value Added Products or Derivative Work from Copernicus Marine Service Products for any purpose.
     licenseUrl: https://marine.copernicus.eu/user-corner/service-commitments-and-licence
     licenseType: 
-    licenseHolders: {
+    licenseHolders: {}
       - name: Mercator Ocean International
         type: organization
         expiry: perpetual
-    }
    
 
   accessPattern: [ api, direct download ]
@@ -58,13 +57,13 @@ metadata:
         geometry:
           type: Polygon
           coordinates:
-            - [-180, -80] # Lower corner
-            - [-180,  90]
-            - [179.75, 90] # Upper corner
-            - [179.75, -80]
-            - [-180, -80]
+          - [-180, -80] # Lower corner
+          - [-180,  90]
+          - [179.75, 90] # Upper corner
+          - [179.75, -80]
+          - [-180, -80]
         properties:
-          name: Global Oceans
+          name: Global Ocean
   dataFormat: NetCDF-4
   fileSize:
   numberOfRecords:
@@ -84,7 +83,7 @@ metadata:
     # Uncomment and fill specific data type(s) info for dataset
     oceanographicProfiles:
     - profile1:
-        region: Global Oceans
+        region: Global Ocean
         # Schema to populate GeoJSON fields 
         geoJson:
           type: FeatureCollection
@@ -106,9 +105,9 @@ metadata:
           min: -5727.91650390625
           max: -0.4940253794193268
         parametersMeasured: 
-          - Net primary production of biomass expressed as carbon per unit volume in sea water (nppv)
-          - Mole concentration of dissolved molecular oxygen in sea water (o2)
+        - Net primary production of biomass expressed as carbon per unit volume in sea water (nppv)
+        - Mole concentration of dissolved molecular oxygen in sea water (o2)
         instrumentUsed:
         variablesIncluded: 
-          - nppv
-          - o2
+        - nppv
+        - o2

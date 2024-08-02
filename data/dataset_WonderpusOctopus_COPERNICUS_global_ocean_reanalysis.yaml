@@ -1,9 +1,9 @@
 general:
   datasetName: Copernicus Marine Dataset - Global Ocean Physics Reanalysis (cmems_mod_glo_phy_my_0.083deg_P1M-m)
-  creators: {
+  creators: {}
     - name: Copernicus Marine Service (CMEMS)
       contact: servicedesk.cmems@mercator-ocean.eu
-  }
+
   
 
   licensing:
@@ -11,11 +11,10 @@ general:
     conditionalUsage: Allowed to modify, adapt, develop, create and distribute Value Added Products or Derivative Work from Copernicus Marine Service Products for any purpose.
     licenseUrl: https://marine.copernicus.eu/user-corner/service-commitments-and-licence
     licenseType: 
-    licenseHolders: {
+    licenseHolders: {}
       - name: Mercator Ocean International
         type: organization
         expiry: perpetual
-    }
    
 
   accessPattern: [ api, direct download ]
@@ -58,13 +57,13 @@ metadata:
         geometry:
           type: Polygon
           coordinates:
-            - [-180, -80] # Lower corner
-            - [-180,  90]
-            - [179.9166717529297, 90] # Upper corner
-            - [179.9166717529297, -80]
-            - [-180, -80]
+          - [-180, -80] # Lower corner
+          - [-180,  90]
+          - [179.9166717529297, 90] # Upper corner
+          - [179.9166717529297, -80]
+          - [-180, -80]
         properties:
-          name: Global Oceans
+          name: Global Ocean
   dataFormat: NetCDF-4
   fileSize:
   numberOfRecords:
@@ -106,28 +105,28 @@ metadata:
           min: -5727.91650390625
           max: -0.4940253794193268
         parametersMeasured: 
-          - Sea water potential temperature at sea floor [degrees Celsius] (bottomT)
-          - Ocean mixed layer thickness defined by sigma theta [meters] (mlotst)
-          - Sea ice area fraction [1] (siconc)
-          - Sea ice thickness [meters] (sithick)
-          - Sea water salinity [1e-3] (so)
-          - Sea water potential temperature [degrees Celsius] (thetao)
-          - Eastward sea water velocity [meters/seconds] (uo)
-          - Eastward sea ice velocity [meters/seconds] (usi)
-          - Northward sea water velocity [meters/seconds] (vo)
-          - Northward sea ice velocity [meters/seconds] (vsi)
-          - Sea surface height above geoid [meters] (zos)
+        - Sea water potential temperature at sea floor [degrees Celsius] (bottomT)
+        - Ocean mixed layer thickness defined by sigma theta [meters] (mlotst)
+        - Sea ice area fraction [1] (siconc)
+        - Sea ice thickness [meters] (sithick)
+        - Sea water salinity [1e-3] (so)
+        - Sea water potential temperature [degrees Celsius] (thetao)
+        - Eastward sea water velocity [meters/seconds] (uo)
+        - Eastward sea ice velocity [meters/seconds] (usi)
+        - Northward sea water velocity [meters/seconds] (vo)
+        - Northward sea ice velocity [meters/seconds] (vsi)
+        - Sea surface height above geoid [meters] (zos)
         instrumentUsed:
         variablesIncluded: 
-          - bottomT
-          - mlotst
-          - siconc
-          - sithick
-          - so
-          - thetao
-          - uo
-          - usi
-          - vo
-          - vsi
-          - zos
+        - bottomT
+        - mlotst
+        - siconc
+        - sithick
+        - so
+        - thetao
+        - uo
+        - usi
+        - vo
+        - vsi
+        - zos
 

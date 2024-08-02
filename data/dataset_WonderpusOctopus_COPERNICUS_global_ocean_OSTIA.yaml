@@ -1,9 +1,9 @@
 general:
   datasetName: Copernicus Marine Dataset - Global Ocean OSTIA Sea Surface Temperature and Sea Ice Analysis (ST_GLO_SST_L4_NRT_OBSERVATIONS_010_001/METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2/analysed_sst)
-  creators: {
+  creators: {}
     - name: Copernicus Marine Service (CMEMS)
       contact: servicedesk.cmems@mercator-ocean.eu
-  }
+
   
 
   licensing:
@@ -11,11 +11,10 @@ general:
     conditionalUsage: Allowed to modify, adapt, develop, create and distribute Value Added Products or Derivative Work from Copernicus Marine Service Products for any purpose.
     licenseUrl: https://marine.copernicus.eu/user-corner/service-commitments-and-licence
     licenseType: 
-    licenseHolders: {
+    licenseHolders: {}
       - name: Mercator Ocean International
         type: organization
         expiry: perpetual
-    }
    
 
   accessPattern: [ api, direct download ]
@@ -65,8 +64,8 @@ metadata:
         properties:
           name: Global Ocean
   dataFormat: 
-    - NetCDF-3
-    - NetCDF-4
+  - NetCDF-3
+  - NetCDF-4
   fileSize:
   numberOfRecords:
   primaryDataType: Satellite data
@@ -85,7 +84,7 @@ metadata:
     # Uncomment and fill specific data type(s) info for dataset
     oceanographicProfiles:
     - profile1:
-        region: Global Oceans
+        region: Global Ocean
         # Schema to populate GeoJSON fields 
         geoJson:
           type: FeatureCollection
@@ -107,14 +106,14 @@ metadata:
           min: 
           max: 
         parametersMeasured: 
-          - Sea surface foundation temperature [kelvin] (analysed_sst)
-          - Sea surface foundation temperature standard error [kelvin] (analysis_error)
-          - Land sea ice lake bit mask [no unit] (mask)
-          - Sea ice area fraction [no unit] (sea_ice_fraction)
+        - Sea surface foundation temperature [kelvin] (analysed_sst)
+        - Sea surface foundation temperature standard error [kelvin] (analysis_error)
+        - Land sea ice lake bit mask [no unit] (mask)
+        - Sea ice area fraction [no unit] (sea_ice_fraction)
         instrumentUsed: Satellites
         variablesIncluded: 
-          - analysed_sst 
-          - analysis_error
-          - mask
-          - sea_ice_fraction
+        - analysed_sst 
+        - analysis_error
+        - mask
+        - sea_ice_fraction
 
