@@ -1,9 +1,9 @@
 general:
-  datasetName: Copernicus Marine Dataset - Monthly Global Oceans O2 (cmems_mod_glo_bgc-bio_anfc_0.25deg_P1M-m_202311)
-  creators: {
+  datasetName: Copernicus Marine Dataset - Multi Observation Global Ocean 3D Temperature Salinity Height Geostrophic Current and MLD (dataset-armor-3d-nrt-monthly)
+  creators: {}
     - name: Copernicus Marine Service (CMEMS)
       contact: servicedesk.cmems@mercator-ocean.eu
-  }
+
   
 
   licensing:
@@ -11,33 +11,32 @@ general:
     conditionalUsage: Allowed to modify, adapt, develop, create and distribute Value Added Products or Derivative Work from Copernicus Marine Service Products for any purpose.
     licenseUrl: https://marine.copernicus.eu/user-corner/service-commitments-and-licence
     licenseType: 
-    licenseHolders: {
+    licenseHolders: {}
       - name: Mercator Ocean International
         type: organization
         expiry: perpetual
-    }
+    
    
 
   accessPattern: [ api, direct download ]
 
   description: |
     Copernicus Marine Data
-    Global Ocean Biogeochemistry Analysis and Forecast
-    Monthly mean fields for product GLOBAL_ANALYSIS_FORECAST_BIO_001_028
-    Geographical area: Global oceans
-    Variables: 1) Net primary production of biomass expressed as carbon per unit volume in sea water (nppv [mg/m3/day])
-    2) Mole concentration of dissolved molecular oxygen in sea water (o2 [mmol/m3])
-    Timeframe: from 1 October 2021 to 1 June 2024
-    Dataset available at https://data.marine.copernicus.eu/product/GLOBAL_ANALYSISFORECAST_BGC_001_028/services
-  keywords: [Copernicus, Global, Oceans, O2, NPPV]
+    Multi Observation Global Ocean 3D Temperature Salinity Height Geostrophic Current and MLD
+    Product MULTIOBS_GLO_PHY_TSUV_3D_MYNRT_015_012
+    Geographical area: Global ocean
+    Variables: it consists of 3D Temperature, Salinity, Heights, Geostrophic Currents and Mixed Layer Depth
+    Timeframe: from January 2019 to June 2024 (monthly)
+    Dataset available at https://data.marine.copernicus.eu/product/MULTIOBS_GLO_PHY_TSUV_3D_MYNRT_015_012/services
+  keywords: [Copernicus, Global, Ocean, Multiobservation]
   additionalInfo:
     relatedDatasets: 
     relatedPublications:
     contactInfo: 
 
 metadata:
-  creationDate: '2023-11-30T11:00:00.000Z'
-  lastUpdated: '2024-07-11T00:04:08.679449Z'
+  creationDate: 
+  lastUpdated: '2024-07-09T17:33:29.750907'
   version: 
   versionControl:
     repositoryUrl:
@@ -48,7 +47,7 @@ metadata:
     
     pullRequests: []
   temporalCoverage:
-    begin: '2021-10-01T00:00:00Z'
+    begin: '2019-01-01T00:00:00Z'
     end: '2024-06-01T00:00:00Z'
   spatialCoverage:
     geoJson:
@@ -58,13 +57,13 @@ metadata:
         geometry:
           type: Polygon
           coordinates:
-            - [-180, -80] # Lower corner
-            - [-180,  90]
-            - [179.75, 90] # Upper corner
-            - [179.75, -80]
-            - [-180, -80]
+          - [-179.875, -82.12] # Lower corner
+          - [-179.875,  89.875]
+          - [179.875, 89.875] # Upper corner
+          - [179.875, -82.12]
+          - [-179.875, -82.12]
         properties:
-          name: Global Oceans
+          name: Global Ocean
   dataFormat: NetCDF-4
   fileSize:
   numberOfRecords:
@@ -84,7 +83,7 @@ metadata:
     # Uncomment and fill specific data type(s) info for dataset
     oceanographicProfiles:
     - profile1:
-        region: Global Oceans
+        region: Global Ocean
         # Schema to populate GeoJSON fields 
         geoJson:
           type: FeatureCollection
@@ -95,20 +94,29 @@ metadata:
               coordinates:
               # This is the box within which we got the data.
               # NOTE: The box might includes lands as well, even though the data is just for the oceans.
-              - [-180, -80] # Lower corner
-              - [-180,  90]
-              - [179.75, 90] # Upper corner
-              - [179.75, -80]
-              - [-180, -80]
+              - [-179.875, -82.12] # Lower corner
+              - [-179.875,  89.875]
+              - [179.875, 89.875] # Upper corner
+              - [179.875, -82.12]
+              - [-179.875, -82.12]
             properties:
-              name: Global Oceans polygon
+              name: Global Ocean polygon
         depthRange:
-          min: -5727.91650390625
-          max: -0.4940253794193268
+          min: 
+          max: 
         parametersMeasured: 
-          - Net primary production of biomass expressed as carbon per unit volume in sea water (nppv)
-          - Mole concentration of dissolved molecular oxygen in sea water (o2)
+        - Ocean mixed layer thickness [m] (mlotst)
+        - Sea water salinity [0.001] (so)
+        - Sea water temperature [degrees_C] (to)
+        - Geostrophic eastward sea water velocity [m s-1] (ugo)
+        - Geostrophic northward sea water velocity [m s-1] (vgo)
+        - Geopotential height [m] (zo)
         instrumentUsed:
         variablesIncluded: 
-          - nppv
-          - o2
+        - mlotst
+        - so
+        - to
+        - ugo
+        - vgo
+        - zo
+
