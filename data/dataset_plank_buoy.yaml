@@ -1,0 +1,181 @@
+general:
+  datasetName: Chesapeake Bay Buoy Data
+  creators: {}
+  - name: Chesapeake Bay Interpretive Buoy System
+    contact: cbibs@noaa.gov
+  licensing:
+    acessType: open access (NOAA NODD)
+    conditionalUsage: 
+    licenseUrl: 
+    licenseType: NOAA Open Data Dissemination
+    licenseHolders:
+      - name: NOAA
+        type: NODD
+        expiry: perpetual
+  accessPattern:
+    - api
+    - download link
+  description: |
+The National Oceanic and Atmospheric Administration's (NOAA) Chesapeake Bay Interpretive Buoy System (CBIBS) is a network of observing platforms (buoys) that collect meteorological, oceanographic, and water-quality data and relay that information using wireless technology to a variety of users.
+  keywords: [ocean, satellite observations, chlorophyll, buoy]
+  additionalInfo:
+    relatedDatasets:
+    relatedPublications:
+    contactInfo:
+
+metadata:
+  creationDate: '2009-11-18 19:00:00'
+  lastUpdated: '2024-07-28 23:54:00'
+  version: 
+  versionControl:
+    # Git repository URL
+    repositoryUrl:
+    # Branch tags for this specific version of the data
+    branchTag:
+    # List of related issues
+    relatedIssues: []
+    # List of related pull requests
+    pullRequests: []
+  temporalCoverage:
+    begin: '2009-11-18 19:00:00'
+    end: 'ongoing'
+  spatialCoverage:
+    geoJson:
+      type: FeatureCollection
+      features:
+      - type: Feature
+        geometry:
+          type: Points
+            coordinates: [[[39.15191, -76.39115], [38.9631, -76.4475], [38.5563, -76.4147], [38.033, -76.3355], [37.5672, -76.2574], [37.20063, -76.26598], [37.21137, -76.78677], [36.9981, -76.0873], [36.8455, -76.298], [39.5404, -76.0736], [38.7877, -77.0357]]]
+          properties:
+            name: CBIBS
+  dataFormat: CSV
+  fileSize:
+  numberOfRecords:
+  primaryDataType: Water quality parameters in the Chesapeake Bay # e.g., oceanographic profiles, sea level data, marine chemistry
+  dataQuality:
+    qualityControlProcedures:
+      - name: Quality Assurance of Real Time Oceanographic Data tests
+        description: The first test is done on data in real time as it is collected. This test applies QC in real time for immediate QC values. A second, more thorough, post-processing algorithm is applied to the data that are exported to
+the National Centers for Environmental Information (NCEI) datastore. See https://buoybay.noaa.gov/sites/default/files/2023-02/CBIBSQCCodeMeanings_2.pdf
+    knownIssues:
+      - name: 
+        description: It is applied directly to the data stream. If there are any
+communication delays or other processing anomalies, this style of analysis may be incomplete.
+    limitations:
+      - name:
+        description:
+    processingSteps:
+      - name: Automated tests
+        description: A range of automated tests (rate of change, climatology, gap, gross range, location, flat line, syntax test).
+
+  dataTypes:
+    # Uncomment and fill specific data type(s) info for dataset
+    oceanographicProfiles:
+    - profile1:
+        region: Global Ocean
+        # Schema to populate GeoJSON fields 
+        geoJson:
+          type: FeatureCollection
+          features:
+          - type: Feature
+            geometry:
+              type: Points
+              coordinates:
+              - [39.15191, -76.39115]
+              - [38.9631, -76.4475]
+              - [38.5563, -76.4147]
+              - [38.033, -76.3355]
+              - [37.5672, -76.2574]
+              - [37.20063, -76.26598]
+              - [37.21137, -76.78677]
+              - [36.9981, -76.0873]
+              - [36.8455, -76.298]
+              - [39.5404, -76.0736]
+              - [38.7877, -77.0357]        
+            properties:
+              name: Chesapeake Bay Buoy Data
+        depthRange:
+          min: 0
+          max: 200
+        parametersMeasured:
+          - Air Temperature (F)
+          - Barometric Pressure (Hg)
+          - Chlorophyll-a (ug/l)
+          - Volume attenuation coefficient of downwelling radiative flux in sea water (KD)
+          - Current Direction (degrees)
+          - Current Speed (nautical miles per hour)
+          - Dissolved Oxygen (mg/l)
+          - Salinity (parts per thousand)
+          - Sea Nettle Probability
+          - Turbidity (NTU)
+          - Water Temperature (F)
+          - Wave Direction (degrees)
+          - Wave Height (Significant)
+          - Wave Period (Significant)
+          - Wind Direction (degrees)
+          - Wind Gust (m/s)
+          - Wind Speed (m/s)
+
+
+        instrumentUsed:
+          - name: Buoy weather station
+            description: The Airmar 200WX-IPX7 measures wind speed, wind gust, wind direction, and air temperature. It also has an integrated GPS receiver that tracks buoy position and a barometer that measures air pressure.
+        variablesIncluded:
+        - wind speed
+        - wind gust
+        - wind direction
+        - air temperature
+          - name: Buoy water quality sensors
+            description: CBIBS buoys use sensors to monitor water-quality parameters including water temperature, salinity, dissolved oxygen, turbidity, and chlorophyll-a. Salinity and temperature are the key measurements we report; other parameters are also measured at some locations. CBIBS tracks these parameters at 0.5 meters below the water’s surface.
+        variablesIncluded:
+        - water temperature
+        - salinity
+        - dissolved oxygen
+        - turbidity
+        - chlorophyll-a
+          - name: Buoy current profiler
+            description: The profiler provides current speed and current direction at one-meter levels from the surface to the bottom. The current as reported on the CBIBS website and database is an average of the upper five meters. The CBIBS standard instrument is a NORTEK AquaDopp. It measures currents by analyzing acoustic (1 mHz frequency) reflections from the moving water below the instrument over a five-minute period ten times per hour.
+        variablesIncluded:
+        - current speed
+        - current direction
+          - name: Buoy Acoustic Receiver
+            description: Innovasea VR2W data-logging computers attached to the bottom of the buoy “listen” for tagged fish. When a 69 kHz signal is identified, the transmitter tag's unique ID code is saved with the date and time. The data from any single receiver provides a record of each visit to that location by a tagged fish. The data are uploaded to the Mid-Atlantic Acoustic Telemetry Observation System when the receivers are retrieved from the field.
+        variablesIncluded:
+          - name: Buoy wave measurement system
+            description: The SeaView SVS-603 is a highly accurate wave sensor that reports wave height, wave period, wave direction, and more via RS-232 and logs wave data, energy spectra, acceleration, and more.
+        variablesIncluded:
+        - wave height
+        - wave period
+        - wave direction
+
+    # seaLevel:
+    #   measurementFrequency:
+    #   datumUsed: {}
+    #   # - name: foo
+    #   #   description: bar
+    #   variablesIncluded: []
+
+    # marineChemistry:
+    #   chemicalParameters:
+    #   samplingMethod:
+    #   variablesIncluded: []
+
+    # biological:
+    #   speciesCovered:
+    #   samplingMethod:
+    #   taxonomicInformation:
+    #   variablesIncluded: []
+
+    # acoustic:
+    #   frequencyRange:
+    #     min:
+    #     max:
+    #   instrumentType:
+    #   variablesIncluded: []
+
+    # satellite:
+    #   satelliteSensor:
+    #   resolution:
+    #   bandsChannels: []
+    #   variablesIncluded: []
